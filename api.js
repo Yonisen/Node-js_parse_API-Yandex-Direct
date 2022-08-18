@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+
 //сздайте приложение https://oauth.yandex.ru/client/new
 //получите токен https://oauth.yandex.ru/authorize?response_type=token&client_id=<идентификатор приложения>
 //отправьте заявку https://direct.yandex.ru/registered/main.pl?cmd=apiCertificationRequestList
@@ -265,14 +266,20 @@ async function dataRequest(data, newReport){
 			}, 500);
 		})		
 	}			
-	
+//////////////////////////////// что вернуть	
 //то что нужно
-    return result.data[0].SearchedWith[0].Shows;
+    let resultData =  result.data.map(function(item){
+		return item.SearchedWith[0].Shows;
+	});
+	let returningData = {};
+	returningData.length = resultData.length;
+	returningData.string = resultData.join('\n');
+	return returningData;
 }
 
-async function getData(phrase) {
+async function getData(phrases, geoId) {
     await deleteAllReports();
-    let data = new WordStatParse([phrase], []);
+    let data = new WordStatParse(phrases, geoId);
     let newReport;
 	
 	while ((newReport = await data.CreateNewWordstatReport())===undefined) {
