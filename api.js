@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-//создайте приложение https://oauth.yandex.ru/client/new
+//сздайте приложение https://oauth.yandex.ru/client/new
 //получите токен https://oauth.yandex.ru/authorize?response_type=token&client_id=<идентификатор приложения>
 //отправьте заявку https://direct.yandex.ru/registered/main.pl?cmd=apiCertificationRequestList
 //включите песочницу тут https://direct.yandex.ru/registered/main.pl?cmd=apiApplicationList
