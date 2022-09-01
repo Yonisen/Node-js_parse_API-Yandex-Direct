@@ -36,7 +36,7 @@ node парсинг_api.js
 Только перед продолжением, откройте `result.txt` и запомните количество <b>не</b> пустых строк.<br>
 Запишите его в `парсинг_api.js`, в переменную "current"
 ### Заключение
-Если вы богаты и я сэкономил вам время, то можете поддержать меня чеканной крипто монетой <i>Monero</i>:
+Если вы богаты и я сэкономил вам время, то можете поддержать меня монетой:
 ```sh
-45DsfSSUkUPXaBT2dmFgQJRfjAK72Ttz284CpQzPEJRHdh86FAVdH8V3e1aRshMNjfHi9WPaKRZ3mFo7ULg7QHhz5ZevPKo
+https://www.donationalerts.com/r/yonisen
 ```
